@@ -11,10 +11,15 @@ class customButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        child: Text(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children:<Widget>[
+            Text('Logo'),
+            Text(
           text,
           style: TextStyle(fontSize: 20, color: Colors.black54),
         ),
+            Text('Logo'),]),
         style: ElevatedButton.styleFrom(
             primary: color,
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
