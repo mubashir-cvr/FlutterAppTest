@@ -4,6 +4,7 @@ import 'SigninPage.dart';
 void main() {
   runApp(MyApp()); //run app root widget
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Time Tracker',
       theme: ThemeData(
-        primarySwatch:Colors.indigo,
+        primarySwatch: Colors.indigo,
       ),
       home: Signinpage(),
     );
