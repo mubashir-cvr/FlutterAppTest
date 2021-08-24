@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'Discussion.dart';
 import 'SigninPage.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+Future<void> main() async{
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(MyApp()); //run app root widget
 }
 
@@ -15,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: Signinpage(),
+      home: Discussion(title: 'Discussion Page',),
     );
   }
 }

@@ -1,10 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'CustomWidget/custom_raised_button.dart';
 
 class Signinpage extends StatelessWidget {
-
+  Future<void>  _signinAnonymously() async {
+    final userCredentials =await FirebaseAuth.instance.signInAnonymously();
+    print('${userCredentials.user}');
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
